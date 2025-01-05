@@ -37,6 +37,19 @@ body {
     /* Apply Roboto here */
 }
 
+h1.text-primary {
+    color: var(--walnut-brown) !important;
+}
+
+h2.text-secondary {
+    color: var(--walnut-brown) !important;
+    opacity: 0.7;
+}
+h3.text-secondary {
+    color: var(--walnut-brown) !important;
+    opacity: 0.5;
+}
+
 /* Default sticky-top style */
 .main-header {
     transition: background-color 0.3s, box-shadow 0.3s, height 0.3s;
@@ -93,7 +106,7 @@ body {
 
 
 .hero {
-    height: 200vh;
+    height: 150vh;
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
@@ -129,7 +142,7 @@ body {
     /* height: auto; */
     /* background: var(--gradient-top); */
     z-index: 0;
-    background-image: url('assets/banner.JPG');
+    background-image: url('assets/banner.webp');
     background-size: cover;
     background-position: center;
     height: auto;
@@ -196,7 +209,7 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     .projects .project {
         flex-direction: column;
     }
@@ -208,33 +221,33 @@ body {
     align-items: center;
     border-radius: 5px;
     overflow: hidden;
-    width: 40%;
+    width: 65%;
     min-width: 250px;
     height: auto;
 }
 
 
-@media (max-width: 750px) {
+
+@media (max-width: 1000px) {
     .project > .project-image {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
-        margin-top: 25px;
     }
 }
 
-.project-image img {
+/* .project-image img {
     border: 5px solid var(--rose-quartz);
-}
+} */
 
 .project > .project-text {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: auto;
     max-width: 600px;
     margin: 15px;
 }
 
-.project .learn-more {
+.learn-more {
     display: flex;
     bottom: 15px;
     left: 15px;
@@ -248,5 +261,28 @@ body {
     font-weight: 700;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
+}
+
+.learn-more.wider {
+    width: 200px;
+}
+
+.lead{
+    padding-top: 10px;
+}
+
+
+.tags {
+    margin-top: 0 !important;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.05cm 0.1cm;
+    margin: 0.05cm;
+    border-radius: 0.2cm;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
 }
 

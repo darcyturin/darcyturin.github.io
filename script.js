@@ -11,29 +11,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // window.addEventListener("scroll", () => {
-    //     const hero = document.querySelector(".hero");
-    //     const background = document.querySelector(".background");
-    //     const textContainer = document.querySelector(".text-container");
-    
-    //     const bgRect = background.getBoundingClientRect();
-    //     const textRect = textContainer.getBoundingClientRect();
+    // Define project data as a constant
+    const PROJECTS = [
+        { name: "Capstone", filename: "capstone.html" },
+        { name: "Ecology Research Proposal", filename: "ecology_proposal.html" },
+        { name: "StoryMap", filename: "russian_literature.html" },
+    ];
 
-    //     const scrollY = window.scrollY;
-    //     background.style.top = `-${scrollY}px`;
+    // Function to fetch project data and populate all dropdowns
+    async function populateProjectsDropdowns() {
+        try {
+            // Find all dropdown menus with the specified class
+            const dropdowns = document.querySelectorAll('.nav-item.dropdown');
 
-    //     console.log(bgRect.bottom, textRect.bottom)
-    
-    //     if (bgRect.bottom <= 50 && textRect.bottom >= 0) {
-    //         // Stick background when it reaches 50px from the top
-    //         console.log(background.offsetHeight)
-    //         const offset = background.offsetHeight - 150
-    //         background.style.top = `-${offset}px`;
-    //         console.log("Stick background")
+            // Populate each dropdown with project links
+            dropdowns.forEach(dropdown => {
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
 
-    //     } 
-    // });
-    
-    
+                // Clear any existing items in the dropdown menu
+                dropdownMenu.innerHTML = '';
+
+                // console.log('menu', dropdownMenu)
+
+                // Add project links
+                PROJECTS.forEach(project => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.className = 'dropdown-item';
+                    link.href = `/projects/${project.filename}`;
+                    link.textContent = project.name;
+                    listItem.appendChild(link);
+                    dropdownMenu.appendChild(listItem);
+                });
+            });
+        } catch (error) {
+            console.error('Error loading projects:', error);
+        }
+    }
+    populateProjectsDropdowns();
+
+
 });
 
