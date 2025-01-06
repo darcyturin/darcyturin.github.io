@@ -104,6 +104,12 @@ h3.text-secondary {
 
 }
 
+.dropdown-menu {
+    transform-origin: top left !important; /* Adjusts the origin for better behavior */
+    right: 0 !important; /* Ensures dropdown aligns to the right edge if needed */
+    left: auto !important;
+}
+
 
 .hero {
     height: 150vh;
@@ -203,6 +209,7 @@ h3.text-secondary {
     margin-left: 50px;
     margin-right: 50px;
     min-height: 350px;
+    height:350px;
     max-width: 1000px;
     width: 80vw;
     border-radius: 5px;
@@ -212,28 +219,34 @@ h3.text-secondary {
 @media (max-width: 1000px) {
     .projects .project {
         flex-direction: column;
+        height: auto;
     }
 }
 
 .project > .project-image {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     overflow: hidden;
-    width: 65%;
+    width: 55%;
+    flex-direction: end;
     min-width: 250px;
-    height: auto;
-}
+    /* height: auto; */
+    text-align: right;
+    vertical-align: middle;
+    margin: auto;
 
-
-
-@media (max-width: 1000px) {
-    .project > .project-image {
-        width: 90%;
-        margin: 0 auto;
+    img {
+        max-height: 300px;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
 }
+
 
 /* .project-image img {
     border: 5px solid var(--rose-quartz);
@@ -242,10 +255,29 @@ h3.text-secondary {
 .project > .project-text {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 45%;
+    min-width: 35%;
     max-width: 600px;
     margin: 15px;
 }
+
+@media (max-width: 1000px) {
+    .project > .project-image {
+        width: 90%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            height: auto;  
+            max-width: none;
+            max-height: none ;
+          }
+    }
+    
+.project > .project-text {
+    width: auto;
+}
+}
+
 
 .learn-more {
     display: flex;
@@ -267,10 +299,6 @@ h3.text-secondary {
     width: 200px;
 }
 
-.lead{
-    padding-top: 10px;
-}
-
 
 .tags {
     margin-top: 0 !important;
@@ -286,3 +314,8 @@ h3.text-secondary {
     text-transform: uppercase;
 }
 
+.image-on-page {
+    max-width: 800px;
+    width: 80%;
+    height: auto;
+}

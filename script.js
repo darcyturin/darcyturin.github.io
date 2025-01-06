@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define project data as a constant
     const PROJECTS = [
         { name: "Capstone", filename: "capstone.html" },
+        { name: "Suitability Analysis", filename: "suitability_analysis.html" },
+        { name: "Least Cost Path Modeling", filename: "least_cost_path.html" },
         { name: "Ecology Research Proposal", filename: "ecology_proposal.html" },
         { name: "StoryMap", filename: "russian_literature.html" },
     ];
