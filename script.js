@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Capstone", filename: "capstone.html" },
         { name: "Suitability Analysis", filename: "suitability_analysis.html" },
         { name: "Least Cost Path Modeling", filename: "least_cost_path.html" },
+        { name: "Supervised Classification", filename: "supervised_classification.html" },
+        { name: "Time Series Analysis", filename: "time_series_analysis.html" },
         { name: "Ecology Research Proposal", filename: "ecology_proposal.html" },
         { name: "StoryMap", filename: "russian_literature.html" },
     ];

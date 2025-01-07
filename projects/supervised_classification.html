@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervised Classification</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header sticky-top scrolled">
+        <nav class="navbar navbar-expand-lg px-3">
+            <a class="navbar-brand text-primary" href="../index.html">
+                <span class="logo">Darcy Turin</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about-me">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- <li><a class="dropdown-item" href="/projects/capstone.html">Capstone</a></li> -->
+                            <!-- Add more project links here -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 lead">
+        <section id="project-overview" class="mb-3">
+            <h1 class="text-primary">Supervised Image Classification</h1>
+            <!-- <h2 class="text-secondary">Raster Analysis and Least Cost Path Modeling for Grizzly Bear Habitat in Alberta
+            </h2> -->
+            <p class="lead">This lab focused on supervised image classification of a Landsat 9 image of the Southern
+                Gulf Islands, BC. We delineated training polygons in QGIS and then used the RSToolbox in R to perform a
+                maximum likelihood supervised classification and assess the accuracy of the classification.
+            </p>
+        </section>
+
+        <section id="details" class="mb-5">
+            <h2 class="text-secondary">Objectives</h2>
+            <ul>
+                <li>Gain practical experience in supervised image classification using a Landsat image.</li>
+                <li>Prepare training data, perform classification, and assess the accuracy of the resulting land cover
+                    map.</li>
+            </ul>
+
+            <h2 class="text-secondary">Method</h2>
+            <ul>
+                <li>Training data selection:
+                    <ul>
+                        <li>Delineate polygons representing seven land cover classes (Broadleaf Forest, Coniferous
+                            Forest, Exposed Soil and Rocks, High Density Developed Areas, Low Density Developed Areas,
+                            Non-Forest Vegetation, Water).</li>
+                        <li>Ensure sufficient polygon coverage for each class, considering spatial variability within
+                            each class.</li>
+                        <li>Split the polygon data into training and validation sets.</li>
+                    </ul>
+                </li>
+                <li>Employ the Maximum Likelihood classification algorithm to classify the Landsat image based on the
+                    spectral signatures of the training data.</li>
+                <li>Evaluate the accuracy (overall, user's, producer's) of the classification using a confusion matrix.
+                </li>
+            </ul>
+
+
+            <h2 class="text-secondary">Results</h2>
+            <ul>
+                <li>Produced a classified land cover map of the study area.</li>
+                <li>Assessed the accuracy of the classification using the calculated metrics.</li>
+                <li>Identified potential sources of error and areas for improvement in the classification process.</li>
+            </ul>
+
+            <h2 class="text-secondary">Packages</h2>
+            <p class="lead">terra, RSToolbox</p>
+
+            <h2 class="text-secondary">Skills</h2>
+            <div class="tags">
+                <span class="tag">Training data selection</span>
+                <span class="tag">Supervised classification</span>
+                <span class="tag">Classification accuracy analysis</span>
+            </div>
+            </br>
+            <h2 class="text-secondary">Course</h2>
+            <p class="lead">Remote Sensing for Ecosystem Management (GEM 520)</p>
+        </section>
+
+        <img src="/assets/" class="image-on-page" loading="lazy">
+
+    </main>
+</body>
+
+</html>
