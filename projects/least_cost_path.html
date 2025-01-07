@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suitability Analysis</title>
+    <title>Least Cost Path Modeling</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,61 +46,59 @@
 
     <main class="container my-5 lead">
         <section id="project-overview" class="mb-3">
-            <h1 class="text-primary">Suitability Analysis for Humpback Whale Habitat in Hawaii</h1>
-            <p class="lead">This lab focused on using GIS to execute a marine spatial planning exercise. Through
-                suitability analysis, we identified the best areas to expand the Hawaiian Islands Humpback Whale
-                National Marine Sanctuary. The analysis considered the conflicts between marine habitats and human
-                activities to prioritize areas most in need of protection.
+            <h1 class="text-primary">Least Cost Path Modeling</h1>
+            <h2 class="text-secondary">Raster Analysis and Least Cost Path Modeling for Grizzly Bear Habitat in Alberta
+            </h2>
+            <p class="lead">This lab focused on raster operations using the Geospatial Data Abstraction Library (GDAL),
+                command-line tools, QGIS, and ArcGIS Pro. We processed raster datasets to create a cost raster
+                representing the cost of movement for a grizzly bear within the Yellowhead Bear Management Area in
+                Alberta. The analysis explored how landscape features and human activity influence the movement and
+                challenges faced by the bears.
             </p>
         </section>
 
         <section id="details" class="mb-5">
             <h2 class="text-secondary">Objectives</h2>
             <ul>
-                <li>Understand the principles of suitability analysis in GIS.</li>
-                <li>Use geospatial tools to model and rank areas based on conservation suitability indices.</li>
+                <li>Using different sources, derive new rasters through raster algebra and cost assignment.</li>
+                <li>Combine these derivative rasters into a cost raster by weighting slope, land cover, and road
+                    distance.</li>
+                <li>Perform a least cost path analysis on the cost raster to model an example of a grizzly bear route.
+                </li>
             </ul>
+
             <h2 class="text-secondary">Approach</h2>
             <ul>
-                <li>
-                    Suitability Analysis: Conduct ordinal classification to assign suitability scores, considering the
-                    following factors:
-                    <ul>
-                        <li>Area Size: Larger areas scored higher in suitability.</li>
-                        <li>Cetacean Sightings: Areas with more cetacean sightings were ranked higher.</li>
-                        <li>Ocean Use Intensity: Areas with more human uses ranked higher in suitability to reflect the
-                            increased need for protection.</li>
-                    </ul>
-                </li>
-                <li>
-                    Geospatial Operations:
-                    <ul>
-                        <li>Perform vector polygon overlays and database table intersections.</li>
-                        <li>Integrate data layers to develop a suitability index ranging from 0 (unsuitable) to 1
-                            (highly suitable).</li>
-                    </ul>
-                </li>
+                <li>Mosaic input rasters and clip to the area of interest.</li>
+                <li>Reclassify land cover raster by assigning cost values.</li>
+                <li>Create derivative rasters for slope, land cover, and road distance.</li>
+                <li>Generate cost raster by assigning weights to slope, land cover, and road distance.</li>
+                <li>Model least cost path by making accumulated distance and backlink layers and applying the optimal
+                    path as a line tool in ArcGIS.</li>
             </ul>
-            <h2 class="text-secondary">Results</h2>
-            <p class="lead">I designed a map identifying the largest, most suitable areas for sanctuary expansion to
-                reduce whale strikes and ensure long-term habitat protection. The analysis balances habitat protection
-                and human ocean use, demonstrating the role of GIS in transparent and informed marine spatial planning.
 
+            <h2 class="text-secondary">Results</h2>
+            <p class="lead">The final product for this lab is a map of a least cost path from the centroid of the
+                primary habitat to a random point in the secondary habitat. This map illustrates an example of the
+                impact of different cost factors on a final path, demonstrating the power of raster analysis in
+                addressing conservation challenges.
             </p>
+
             <h2 class="text-secondary">Skills</h2>
             <div class="tags">
-                <span class="tag">Database interaction</span>
-                <span class="tag">Suitability analysis</span>
-                <span class="tag">Marine spatial planning</span>
-                <span class="tag">GIS in conservation</span>
+                <span class="tag">GDAL utilities</span>
+                <span class="tag">Raster manipulation</span>
+                <span class="tag">Raster algebra</span>
+                <span class="tag">Least cost path modeling in ArcGIS Pro</span>
+                <span class="tag">QGIS</span>
             </div>
             </br>
             <h2 class="text-secondary">Course</h2>
             <p class="lead">GIS for Forestry and Conservation (GEM 510)</p>
-
-            <img src="/assets/suitability_map.png" class="image-on-page" loading="lazy">
-
         </section>
+
+        <img src="/assets/least_cost_path_map.png" class="image-on-page" loading="lazy">
+
     </main>
 </body>
 
