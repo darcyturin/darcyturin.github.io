@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Supervised Classification", filename: "supervised_classification.html" },
         // { name: "Time Series Analysis", filename: "time_series.html" },
         { name: "Ecology Research Proposal", filename: "ecology_proposal.html" },
-        { name: "Audience Analysis", filename: "audience_analysis.html" },
+        // { name: "Audience Analysis", filename: "audience_analysis.html" },
         { name: "StoryMap", filename: "russian_literature.html" },
     ];
 
