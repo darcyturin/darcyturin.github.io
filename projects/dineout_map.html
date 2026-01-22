@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine Out Vancouver Interactive Map</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header sticky-top scrolled">
+        <nav class="navbar navbar-expand-lg px-3">
+            <a class="navbar-brand text-primary" href="../index.html">
+                <span class="logo">Darcy Turin</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about-me">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Add more project links here -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 lead">
+
+        <section id="project-overview" class="mb-3">
+            <h1 class="text-primary">Dine Out Vancouver Interactive Map</h1>
+            <p class="lead">
+                This project focused on using GIS and web mapping to create an interactive tool for exploring restaurants
+                participating in the Dine Out Vancouver Festival. Through spatial data processing, geocoding, and
+                visualization, I transformed publicly available festival data into a geographic interface that allows
+                users to explore options by location, price, and preferences.
+            </p>
+        </section>
+
+        <section id="details" class="mb-5">
+
+            <h2 class="text-secondary">Objectives</h2>
+            <ul>
+                <li>Transform publicly available festival data into a clean, structured spatial dataset.</li>
+                <li>Improve user experience by enabling geographic exploration and filtering of restaurant options.</li>
+                <li>Apply GIS and web mapping techniques to create a fast, mobile-friendly interactive map.</li>
+            </ul>
+
+            <h2 class="text-secondary">Approach</h2>
+            <ul>
+                <li>
+                    Data collection & processing:
+                    <ul>
+                        <li>Aggregated restaurant details, menus, and pricing from publicly available festival pages.</li>
+                        <li>Cleaned and structured the data using Python for spatial processing.</li>
+                    </ul>
+                </li>
+                <li>
+                    Geocoding & data enrichment:
+                    <ul>
+                        <li>Converted addresses into spatial coordinates using OpenStreetMap (Nominatim) and Google
+                            Geocoding services.</li>
+                        <li>Retrieved current restaurant ratings using the Google Places API and joined them to the
+                            spatial dataset.</li>
+                    </ul>
+                </li>
+                <li>
+                    Web mapping & interface design:
+                    <ul>
+                        <li>Exported processed data to GeoJSON for efficient rendering.</li>
+                        <li>Built an interactive map with filters for price, cuisine, menu type, and rating.</li>
+                        <li>Designed the interface for fast performance and usability on desktop and mobile.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 class="text-secondary">Results</h2>
+            <p class="lead">
+                The project demonstrates how GIS, geocoding, and web technologies can be combined to transform static web
+                data into intuitive spatial tools. The map was featured in the <em>Georgia Straight</em>, showcasing its
+                value as an applied GIS project for public engagement.
+            </p>
+
+            <h2 class="text-secondary">Skills</h2>
+            <div class="tags">
+                <span class="tag">GIS</span>
+                <span class="tag">Geocoding</span>
+                <span class="tag">Web mapping</span>
+                <span class="tag">Data processing</span>
+                <span class="tag">Spatial visualization</span>
+                <span class="tag">API integration</span>
+            </div>
+            <br>
+
+            <h2 class="text-secondary">Project</h2>
+
+            <div class="project-embed mb-4">
+                <iframe 
+                    src="https://dineoutmap.ca" 
+                    title="Dine Out Vancouver Interactive Map" 
+                    loading="lazy"
+                    style="width:100%; height:500px; border:1px solid #e5e7eb; border-radius:8px;">
+                </iframe>
+
+                <div class="text-center mt-2">
+                    <a href="https://dineoutmap.ca" target="_blank" class="btn btn-outline-primary">
+                        Open Full Site
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="text-secondary">Credits</h2>
+            <p class="lead">
+                Festival data sourced from publicly available Dine Out Vancouver materials. Restaurant ratings provided
+                via Google Places API. Map data © OpenStreetMap contributors. Vector tiles by Protomaps.
+            </p>
+
+        </section>
+    </main>
+</body>
+
+</html>

@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define project data as a constant
     const PROJECTS = [
+                { name: "Dine Out Vancouver Map", filename: "dineout_map.html" },
+
         { name: "Capstone", filename: "capstone.html" },
         { name: "Suitability Analysis", filename: "suitability_analysis.html" },
         { name: "Least Cost Path Modeling", filename: "least_cost_path.html" },
